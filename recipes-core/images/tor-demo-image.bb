@@ -16,3 +16,5 @@ IMAGE_INSTALL += "\
     torsocks \
     arti \
     "
+
+IMAGE_OVERHEAD_FACTOR = "1.5"
