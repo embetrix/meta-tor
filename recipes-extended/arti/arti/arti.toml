@@ -1,10 +1,12 @@
+# https://gitlab.torproject.org/tpo/core/arti/-/blob/main/crates/arti/src/arti-example-config.toml
 # -- Let Arti run as root (NOT recommended, but if needed...)
-[application]
-allow_running_as_root = true
+#[application]
+#allow_running_as_root = true
 
 # -- Where Arti stores its directory information, cached state, and keys.
 [storage]
-cache_dir = "/var/arti"
+cache_dir = "/var/arti/cache"
+state_dir = "/var/arti/data"
 
 [logging]
 console = "debug"
