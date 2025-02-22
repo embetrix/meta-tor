@@ -8,7 +8,7 @@ ORPort 9001
 ExitRelay 0
 
 # Provide a nickname for your relay (publicly visible).
-Nickname Some-Tor-Relay-12345
+Nickname SomeTorRelay
 
 # Provide a valid admin contact email or URL for directory authorities
 # and users to reach you if needed.
@@ -25,3 +25,6 @@ RelayBandwidthBurst 200 KB
 ## Other Common Options
 # Disable local SOCKS proxy if you only want to run a relay.
 SocksPort 0
+
+## Data directory
+DataDirectory /var/tor
