@@ -10,6 +10,6 @@ S = "${WORKDIR}/git"
 
 inherit autotools pkgconfig
 
-FILES:${PN}-dev += "${libdir}/torsocks/libtorsocks.so"
+INSANE_SKIP:${PN} = "dev-so"
 
 BBCLASSEXTEND = "native nativesdk"
