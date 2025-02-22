@@ -2,6 +2,7 @@
 Description=Anonymizing overlay network for TCP
 After=network-online.target
 Wants=network-online.target
+ConditionPathIsReadWrite=/var/tor
 
 [Service]
 Type=notify

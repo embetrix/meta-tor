@@ -54,4 +54,6 @@ FILES:${PN} += "${bindir} \
                 ${localstatedir}/tor \
                 "
 
+RRECOMMENDS:${PN} += "torsocks"
+
 BBCLASSEXTEND = "native nativesdk"
