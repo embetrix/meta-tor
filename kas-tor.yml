@@ -1,6 +1,6 @@
 header:
   version: 11
-machine: "raspberrypi5"
+machine: "qemux86-64"
 distro: poky
 target:
   - tor-demo-image
