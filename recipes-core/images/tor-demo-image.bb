@@ -17,4 +17,4 @@ IMAGE_INSTALL += "\
     arti \
     "
 
-IMAGE_OVERHEAD_FACTOR = "1.5"
+IMAGE_OVERHEAD_FACTOR = "2.5"
