@@ -9,7 +9,10 @@ IMAGE_INSTALL += "\
     packagegroup-core-boot \
     packagegroup-core-full-cmdline \
     ${CORE_IMAGE_BASE_INSTALL} \
+    curl \
     nginx \
     iptables \
     tor \
+    torsocks \
+    arti \
     "
