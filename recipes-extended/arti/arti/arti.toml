@@ -1,0 +1,14 @@
+# -- Let Arti run as root (NOT recommended, but if needed...)
+[application]
+allow_running_as_root = true
+
+# -- Where Arti stores its directory information, cached state, and keys.
+[storage]
+cache_dir = "/var/arti"
+
+[logging]
+console = "debug"
+
+# -- The SOCKS proxy settings.
+[proxy]
+socks_listen = "127.0.0.1:9050"
