@@ -1,0 +1,27 @@
+## Relay-Specific
+# The port at which Tor will listen for incoming relay connections.
+# Often 443, 9001, or another port that is not filtered by firewalls.
+ORPort 9001
+
+# Indicate whether this relay is allowed to be an "exit" node.
+# Set to 0 to be a middle (non-exit) relay.
+ExitRelay 0
+
+# Provide a nickname for your relay (publicly visible).
+Nickname Some-Tor-Relay-12345
+
+# Provide a valid admin contact email or URL for directory authorities
+# and users to reach you if needed.
+ContactInfo myemail@example.com
+
+## Bandwidth Limits (Adjust to your capacity)
+# Average bandwidth usage (bytes per second) that you want to allow.
+# "100 KB" means ~800 kbps average.
+RelayBandwidthRate 100 KB
+
+# Max burst for short periods (bytes per second).
+RelayBandwidthBurst 200 KB
+
+## Other Common Options
+# Disable local SOCKS proxy if you only want to run a relay.
+SocksPort 0

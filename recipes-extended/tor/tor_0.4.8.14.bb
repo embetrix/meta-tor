@@ -8,6 +8,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=fd51c8540e62d9458acf2e5c6e8ce350"
 SRC_URI = "git://gitlab.torproject.org/tpo/core/${BPN};branch=release-0.4.8;protocol=https \
            file://tor.service.in \
            file://torrc \
+           file://torrc.relay \
            "
 SRCREV = "5d040a975df7a060d0fa6b491cbfd5de2667543b"
 S = "${WORKDIR}/git"
@@ -37,6 +38,7 @@ do_install:append() {
 
     install -d ${D}${sysconfdir}/tor
     install -m 0644 ${WORKDIR}/torrc ${D}${sysconfdir}/tor/torrc
+    install -m 0644 ${WORKDIR}/torrc.relay ${D}${sysconfdir}/tor/torrc.relay
 
     install -m 770 -d ${D}${localstatedir}/tor
     chown tor:tor ${D}${localstatedir}/tor
