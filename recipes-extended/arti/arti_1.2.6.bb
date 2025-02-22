@@ -25,6 +25,7 @@ USERADD_PARAM:${PN}  = "--system  --no-create-home -g arti -s /bin/false arti"
 inherit ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'systemd', '', d)}
 SYSTEMD_SERVICE:${PN} = "arti.service"
 SYSTEMD_PACKAGES = "${PN}"
+SYSTEMD_AUTO_ENABLE:${PN} = "disable"
 
 do_install:append() {
 
