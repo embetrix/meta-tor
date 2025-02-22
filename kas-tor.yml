@@ -3,7 +3,7 @@ header:
 machine: "raspberrypi5"
 distro: poky
 target:
-  - tor-image
+  - tor-demo-image
 repos:
   # It's current revision will be used to perform the build.
   meta-tor:

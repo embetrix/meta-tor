@@ -1,4 +1,4 @@
-DESCRIPTION = "Tor Image"
+DESCRIPTION = "Tor Demo Image"
 
 inherit core-image
 
