@@ -10,7 +10,7 @@ SRC_URI = "git://gitlab.torproject.org/tpo/core/${BPN};branch=release-0.4.8;prot
            file://torrc \
            file://torrc.relay \
            "
-SRCREV = "5d040a975df7a060d0fa6b491cbfd5de2667543b"
+SRCREV = "add2400e16d885340188ac37a9191bebb18117bb"
 S = "${WORKDIR}/git"
 
 DEPENDS = "openssl libevent"
