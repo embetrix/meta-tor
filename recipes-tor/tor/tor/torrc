@@ -2,6 +2,8 @@ ControlPort 9051
 CookieAuthentication 1
 CookieAuthFileGroupReadable 1
 DataDirectoryGroupReadable 1
+Sandbox 1
+SafeLogging 1
 ControlSocket /var/run/tor/control_socket
 CookieAuthFile /var/run/tor/control_auth_cookie
 DataDirectory /var/tor
