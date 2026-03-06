@@ -9,13 +9,14 @@ Type=notify
 DynamicUser=yes
 User=tor
 Group=tor
+BindPaths=/var/tor:/var/lib/tor
 ReadWritePaths=/var/tor
 ExecStart=@bindir@/tor -f /etc/tor/torrc
 #ExecStart=@bindir@/tor -f /etc/tor/torrc.relay
-Restart=on-failure
-RestartSec=5
 RuntimeDirectory=tor
 RuntimeDirectoryMode=0700
+Restart=on-failure
+RestartSec=5
 
 [Install]
 WantedBy = multi-user.target
