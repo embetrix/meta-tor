@@ -2,7 +2,12 @@ DESCRIPTION = "Tor Demo Image"
 
 inherit core-image
 
-EXTRA_IMAGE_FEATURES = "debug-tweaks"
+EXTRA_IMAGE_FEATURES = " \
+    allow-empty-password \
+    empty-root-password \
+    allow-root-login \
+    post-install-logging \
+"
 IMAGE_FEATURES += "ssh-server-openssh"
 
 IMAGE_INSTALL += "\
@@ -10,7 +15,6 @@ IMAGE_INSTALL += "\
     packagegroup-core-full-cmdline \
     ${CORE_IMAGE_BASE_INSTALL} \
     curl \
-    nginx \
     iptables \
     tor \
     torsocks \
