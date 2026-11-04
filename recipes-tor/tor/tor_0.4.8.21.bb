@@ -11,7 +11,6 @@ SRC_URI = "git://gitlab.torproject.org/tpo/core/${BPN};branch=release-0.4.8;prot
            file://torrc.relay \
            "
 SRCREV = "add2400e16d885340188ac37a9191bebb18117bb"
-S = "${WORKDIR}/git"
 
 DEPENDS = "openssl libevent"
 inherit autotools pkgconfig

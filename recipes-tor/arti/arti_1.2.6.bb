@@ -8,7 +8,6 @@ SRC_URI = "git://gitlab.torproject.org/tpo/core/${BPN};branch=main;protocol=http
            file://arti.toml \
            "
 SRCREV = "15e0b8d6702125274aa1844958e2293adb9f9d1d"
-S = "${WORKDIR}/git"
 
 DEPENDS = "openssl sqlite3"
 
