@@ -1,6 +1,7 @@
 # meta-tor
 
-Yocto/Openembedded layer for Tor Onion Router, providing recipes to build and integrate:
+Yocto/OpenEmbedded layer for Tor Onion Router, compatible with
+Yocto Project Scarthgap and Wrynose, providing recipes to build and integrate:
 
 <p align="center"><img src="tor.png" width="200" height="116" /></p>
 
@@ -52,6 +53,11 @@ KAS_MACHINE=qemux86-64 kas-container build kas-tor.yml
 ```
 KAS_MACHINE=qemux86-64 kas shell kas-tor.yml -c 'runqemu kvm serialstdio nographic qemuparams="-m 1024"'
 ```
+
+### Supported Yocto Project releases
+
+- Scarthgap
+- Wrynose
 
 ## Hidden Services & Remote Access
 
