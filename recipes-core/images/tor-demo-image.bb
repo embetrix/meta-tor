@@ -16,6 +16,7 @@ IMAGE_INSTALL += "\
     ${CORE_IMAGE_BASE_INSTALL} \
     curl \
     iptables \
+    nginx \
     tor \
     torsocks \
     arti \
