@@ -9,7 +9,7 @@ repos:
   meta-tor:
   poky:
     url: "https://git.yoctoproject.org/git/poky"
-    branch: scarthgap
+    branch: wrynose
     path: "layers"
     layers:
       meta:
@@ -17,25 +17,20 @@ repos:
       meta-yocto-bsp:
   meta-openembedded:
     url: "https://github.com/openembedded/meta-openembedded.git"
-    branch: scarthgap
+    branch: wrynose
     path: "layers/meta-openembedded"
     layers:
       meta-oe:
       meta-python:
       meta-networking:
       meta-perl:
-      meta-python:
       meta-multimedia:
       meta-filesystems:
       meta-webserver:
   meta-raspberrypi:
     url: "https://git.yoctoproject.org/git/meta-raspberrypi.git"
-    branch: scarthgap
+    branch: wrynose
     path: "layers/meta-raspberrypi"
-  meta-stm32mp15x:
-    url: "https://github.com/embetrix/meta-stm32mp15x.git"
-    branch: scarthgap
-    path: "layers/meta-stm32mp15x"
 local_conf_header:
   standard: |
     CONF_VERSION = "2"
