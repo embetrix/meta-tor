@@ -7,9 +7,12 @@ SafeLogging 1
 ControlSocket /var/run/tor/control_socket
 CookieAuthFile /var/run/tor/control_auth_cookie
 DataDirectory /var/tor
-HiddenServiceDir /var/tor/hidden_service
-HiddenServicePort 443  127.0.0.1:443
-HiddenServicePort 22   127.0.0.1:22
+
+# To enable an onion service uncomment HiddenServiceDir and at least one
+# HiddenServicePort below. Tor rejects a HiddenServiceDir with no ports configured.
+#HiddenServiceDir /var/tor/hidden_service
+#HiddenServicePort 443  127.0.0.1:443
+#HiddenServicePort 22   127.0.0.1:22
 #HiddenServicePort 80   127.0.0.1:80
 #HiddenServicePort 8080 127.0.0.1:8080
 #HiddenServiceAuthorizeClient stealth SomeClient
