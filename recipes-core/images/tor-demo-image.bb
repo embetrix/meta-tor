@@ -2,7 +2,6 @@ DESCRIPTION = "Tor Demo Image"
 
 inherit core-image
 
-EXTRA_IMAGE_FEATURES = "debug-tweaks"
 IMAGE_FEATURES += "ssh-server-openssh"
 
 IMAGE_INSTALL += "\
