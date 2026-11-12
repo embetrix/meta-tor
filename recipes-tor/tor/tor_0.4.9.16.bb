@@ -2,18 +2,17 @@ SUMMARY = "Tor Onion Router core"
 DESCRIPTION = "Tor Onion Router core to protect your privacy on the internet by hiding the connection between \
 your Internet address and the services"
 HOMEPAGE = "https://www.torproject.org"
-LICENSE = "BSD-3-Clause"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=fd51c8540e62d9458acf2e5c6e8ce350"
+LICENSE = "BSD-3-Clause & MIT"
+LIC_FILES_CHKSUM = "file://LICENSE;md5=1c49e60ec3ca90464faf1a4d6c19e384"
 
-SRC_URI = "git://gitlab.torproject.org/tpo/core/${BPN};branch=release-0.4.8;protocol=https \
+SRC_URI = "git://gitlab.torproject.org/tpo/core/${BPN};branch=release-0.4.9;protocol=https;tag=tor-${PV} \
            file://tor.service.in \
            file://torrc \
            file://torrc.relay \
            "
-SRCREV = "add2400e16d885340188ac37a9191bebb18117bb"
-S = "${WORKDIR}/git"
+SRCREV = "c51547ca15ea665950dd154e160051c57f5719db"
 
-DEPENDS = "openssl libevent"
+DEPENDS = "openssl libevent zlib"
 inherit autotools pkgconfig
 
 PACKAGECONFIG ??= "systemd zstd lzma"
@@ -37,15 +36,15 @@ SYSTEMD_PACKAGES = "${PN}"
 do_install:append() {
 
     install -d ${D}${sysconfdir}/tor
-    install -m 0644 ${WORKDIR}/torrc ${D}${sysconfdir}/tor/torrc
-    install -m 0644 ${WORKDIR}/torrc.relay ${D}${sysconfdir}/tor/torrc.relay
+    install -m 0644 ${UNPACKDIR}/torrc ${D}${sysconfdir}/tor/torrc
+    install -m 0644 ${UNPACKDIR}/torrc.relay ${D}${sysconfdir}/tor/torrc.relay
 
     install -m 770 -d ${D}${localstatedir}/tor
     chown tor:tor ${D}${localstatedir}/tor
 
     if ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'true', 'false', d)}; then
         install -d ${D}${systemd_system_unitdir}
-        install -m 0644 ${WORKDIR}/tor.service.in ${D}${systemd_system_unitdir}/tor.service
+        install -m 0644 ${UNPACKDIR}/tor.service.in ${D}${systemd_system_unitdir}/tor.service
         sed -i 's:@bindir@:${bindir}:' ${D}${systemd_system_unitdir}/tor.service
     fi
 }
