@@ -3,13 +3,14 @@ Description=Anonymizing overlay network for TCP (Arti-Rust)
 After=network-online.target
 Wants=network-online.target
 Conflicts=tor.service
-ConditionPathIsReadWrite=/var/arti
 
 [Service]
 Type=exec
 DynamicUser=yes
 SupplementaryGroups=arti
-ReadWritePaths=/var/arti
+StateDirectory=arti
+StateDirectoryMode=0700
+BindPaths=/var/lib/arti:/var/arti
 ExecStart=@bindir@/arti proxy -c /etc/arti/arti.toml
 Restart=on-failure
 RestartSec=5
