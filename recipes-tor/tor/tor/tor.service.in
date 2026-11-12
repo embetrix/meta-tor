@@ -2,15 +2,15 @@
 Description=Anonymizing overlay network for TCP
 After=network-online.target
 Wants=network-online.target
-ConditionPathIsReadWrite=/var/tor
 
 [Service]
 Type=notify
 DynamicUser=yes
 User=tor
 Group=tor
-BindPaths=/var/tor:/var/lib/tor
-ReadWritePaths=/var/tor
+StateDirectory=tor
+StateDirectoryMode=0700
+BindPaths=/var/lib/tor:/var/tor
 ExecStart=@bindir@/tor -f /etc/tor/torrc
 #ExecStart=@bindir@/tor -f /etc/tor/torrc.relay
 RuntimeDirectory=tor
