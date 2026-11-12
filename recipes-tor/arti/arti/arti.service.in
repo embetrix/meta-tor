@@ -1,12 +1,12 @@
 [Unit]
 Description=Anonymizing overlay network for TCP (Arti-Rust)
 After=network-online.target
-Wants=network-online.
+Wants=network-online.target
 Conflicts=tor.service
 ConditionPathIsReadWrite=/var/arti
 
 [Service]
-Type=notify
+Type=exec
 DynamicUser=yes
 SupplementaryGroups=arti
 ReadWritePaths=/var/arti
