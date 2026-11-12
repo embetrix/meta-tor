@@ -1,4 +1,4 @@
-# https://gitlab.torproject.org/tpo/core/arti/-/blob/main/crates/arti/src/arti-example-config.toml
+# https://gitlab.torproject.org/tpo/core/arti/-/blob/arti-v2.8.0/crates/arti/src/arti-example-config.toml
 # -- Let Arti run as root (NOT recommended, but if needed...)
 #[application]
 #allow_running_as_root = true
